@@ -8,7 +8,7 @@ var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 
-mongoose.connect('mongodb://localhost/local-authentication-with-passport');
+mongoose.connect('mongodb://localhost/phish-users');
 
 app.use(bodyParser());
 

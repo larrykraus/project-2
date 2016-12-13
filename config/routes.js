@@ -27,8 +27,20 @@ router.route('/login')
 router.route('/logout')
 	.get(usersController.getLogout)
 
-//router.route('/setlists')
-//	.get(usersController.setlists)
+router.route('/setlists')
+	.get(usersController.setlists)
+
+router.route('/index')
+	.get(usersController.index)
+
+router.route('/myshows')
+	.get(usersController.myshows)
+
+router.route('/mysongs')
+	.get(usersController.mysongs)
+
+router.route('/show')
+	.get(usersController.show)			
 
 //router.route('/secret')
 //	.get(authenticatedUser.usersController.secret)

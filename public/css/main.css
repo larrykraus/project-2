@@ -1,5 +1,14 @@
-* {
+body {
 	background-color: #b7b7b7;
+}
+
+.btn-default {
+	margin-top: 6px;
+	margin-left: 12px;
+}
+
+.about {
+	margin-top: 25px;
 }
 
 .hex {
@@ -12,8 +21,12 @@
 	clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
 }
 
+.odd {
+	margin: -2px -8px -2px 16px;
+}
+
 .even {
-	margin: 0px 0px 0px 64px;
+	margin: 0px 0px 0px 80px;
 }
 
 #a{content: url("../images/trey1.jpg");}
