@@ -27,8 +27,8 @@ router.route('/login')
 router.route('/logout')
 	.get(usersController.getLogout)
 
-router.route('/setlists')
-	.get(usersController.setlists)
+//router.route('/setlists')
+//	.get(usersController.setlists)
 
 //router.route('/secret')
 //	.get(authenticatedUser.usersController.secret)
