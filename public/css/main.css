@@ -1,0 +1,32 @@
+* {
+	background-color: #b7b7b7;
+}
+
+.hex {
+	display: inline-block;
+	margin: -16px -8px;
+	width: 140px;
+	height: 140px;
+	background: #1e90ff;
+	-webkit-clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+	clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+}
+
+.even {
+	margin: 0px 0px 0px 64px;
+}
+
+#a{content: url("../images/trey1.jpg");}
+#b{content: url("../images/tab.jpg");}
+#c{content: url("../images/lights1.jpg");}
+#d{content: url("../images/donuts.jpg");}
+#e{content: url("../images/page1.jpg");}
+#f{content: url("../images/poster3.jpg");}
+#g{content: url("../images/nectars.jpg");}
+#h{content: url("../images/mike1.jpg");}
+#i{content: url("../images/album2.jpg");}
+#j{content: url("../images/gorge.jpg");}
+#k{content: url("../images/hotdog.jpg");}
+#l{content: url("../images/album3.jpg");}
+#m{content: url("../images/ocelot.jpg");}
+#n{content: url("../images/mike2.jpeg");}

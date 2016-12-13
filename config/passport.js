@@ -32,8 +32,7 @@ module.exports = function(passport) {
 				});
 			};
 		});
-	};
-	));
+	}));
 
 	passport.use('local-login', new LocalStrategy({
 		usernameField: 'email',
@@ -49,28 +48,9 @@ module.exports = function(passport) {
 				return callback(null, false, req.flash('loginMessage', 'Incorrect password'));
 			};
 			return callback(null, user);
-		};
-		);
-	};
-	));
+		});
+	}));
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

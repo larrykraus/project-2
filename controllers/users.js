@@ -38,7 +38,13 @@ function getLogout(request, response) {
 
 // Secret page
 function secret(request, response) {
-	response.send({ScrtMsg: "I kissed a girl and I liked it"});
+	response.redirect('/');
+	//response.send({ScrtMsg: "I kissed a girl and I liked it"});
+};
+
+// GET /setlists
+function setlists(request, response) {
+	response.render('../views/setlists.ejs', function() {console.log ("hey");});
 };
 
 module.exports = {
@@ -48,35 +54,7 @@ module.exports = {
 	postSignup: postSignup,
 	getLogout: getLogout,
 	secret: secret
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 
 
 
