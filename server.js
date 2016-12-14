@@ -8,7 +8,7 @@ var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 
-mongoose.connect('mongodb://localhost/phish-users');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/phish-users');
 
 app.use(bodyParser());
 
@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
 var routes = require('./config/routes');
 app.use(routes);
 
-app.listen(process.env.MONGODB_URI || 3000);
+app.listen(process.env.PORT || 3000);
 
 
 
