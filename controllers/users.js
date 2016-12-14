@@ -1,4 +1,6 @@
 var passport = require('passport');
+var request = require("request");
+var myURL = 'http://api.phish.net/api.js?api=2.0&method=pnet.shows.setlists.latest&callback=pnet3setlist';
 
 // GET /signup
 function getSignup(request, response) {
@@ -80,6 +82,15 @@ function convertSet(json) {
 	document.write("</div>");
 };
 
+var retrieve = function() {
+	var showData = request(myURL, function(error, response, body) {
+		showData();
+		console.log(response);
+		//var result = JSON.parse(body);
+		//console.log(result);
+	});
+};
+
 
 module.exports = {
 	getLogin: getLogin,
@@ -93,7 +104,8 @@ module.exports = {
 	myshows: myshows,
 	mysongs: mysongs,
 	convertSet: convertSet,
-	show: show
+	show: show,
+	retrieve: retrieve
 };
 
 

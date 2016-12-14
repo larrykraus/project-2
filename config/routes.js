@@ -35,6 +35,7 @@ router.route('/index')
 
 router.route('/myshows')
 	.get(usersController.myshows)
+	.get(usersController.retrieve)
 
 router.route('/mysongs')
 	.get(usersController.mysongs)

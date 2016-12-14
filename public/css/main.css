@@ -16,10 +16,12 @@ body {
 	margin: -16px -8px;
 	width: 140px;
 	height: 140px;
-	background: #1e90ff;
+	background-size: cover;
 	-webkit-clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
 	clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
 }
+
+
 
 .odd {
 	margin: -2px -8px -2px 16px;
@@ -29,17 +31,29 @@ body {
 	margin: 0px 0px 0px 80px;
 }
 
-#a{content: url("../images/trey1.jpg");}
-#b{content: url("../images/tab.jpg");}
-#c{content: url("../images/lights1.jpg");}
-#d{content: url("../images/donuts.jpg");}
-#e{content: url("../images/page1.jpg");}
-#f{content: url("../images/poster3.jpg");}
-#g{content: url("../images/nectars.jpg");}
-#h{content: url("../images/mike1.jpg");}
-#i{content: url("../images/album2.jpg");}
-#j{content: url("../images/gorge.jpg");}
-#k{content: url("../images/hotdog.jpg");}
-#l{content: url("../images/album3.jpg");}
-#m{content: url("../images/ocelot.jpg");}
-#n{content: url("../images/mike2.jpeg");}
+#a{background-image: url("../images/trey1.jpg");
+	background-position: center top;}
+#b{background-image: url("../images/tab.jpg");
+	background-position: center bottom;}
+#c{background-image: url("../images/lights1.jpg");
+	background-position: center center;}
+#d{background-image: url("../images/donuts.jpg");
+	background-position: center center;}
+#e{background-image: url("../images/page1.jpg");
+	background-position: center center;}
+#f{background-image: url("../images/poster3.jpg");}
+#g{background-image: url("../images/nectars.jpg");}
+#h{background-image: url("../images/mike1.jpg");
+	background-size: 140%;
+	background-position: center center;}
+#i{background-image: url("../images/album2.jpg");}
+#j{background-image: url("../images/gorge.jpg");
+	background-position: center center;}
+#k{background-image: url("../images/hotdog.jpg");
+	background-size: 85%;
+	background-position: center center;}
+#l{background-image: url("../images/album3.jpg");}
+#m{background-image: url("../images/ocelot.jpg");
+	background-position: right bottom;}
+#n{background-image: url("../images/mike2.jpeg");
+	background-position: center center;}
