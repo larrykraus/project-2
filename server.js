@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
 var routes = require('./config/routes');
 app.use(routes);
 
-app.listen(3000);
+app.listen(process.env.MONGODB_URI || 3000);
 
 
 
