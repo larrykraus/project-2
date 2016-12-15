@@ -5,6 +5,7 @@ var User = mongoose.Schema({
 	local : {
 		email: String,
 		password: String,
+		//myShows: Array
 	}
 });
 

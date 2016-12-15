@@ -1,6 +1,7 @@
 var passport = require('passport');
 var request = require("request");
-var myURL = 'http://api.phish.net/api.js?api=2.0&method=pnet.shows.setlists.latest&callback=pnet3setlist';
+//var myURL = 'http://api.phish.net/api.js?api=2.0&method=pnet.shows.setlists.latest&callback=pnet3setlist';
+var myURL = 'http://phish.net/setlists/phish-january-01-2015-american-airlines-arena-miami-fl-usa.html';
 
 // GET /signup
 function getSignup(request, response) {
@@ -54,11 +55,6 @@ function setlists(request, response) {
 	response.render('setlists.ejs');
 };
 
-// GET /myshows
-function myshows(request, response) {
-	response.render('myshows.ejs');
-};
-
 // GET /mysongs
 function mysongs(request, response) {
 	response.render('mysongs.ejs');
@@ -69,10 +65,16 @@ function show(request, response) {
 	response.render('show.ejs')
 };
 
+// GET /myshows
+function myshows(request, response) {
+	response.render('myshows.ejs');
+	//retrieve();
+};
+
 //prettifies the incoming JSON
 function convertSet(json) {
 	document.write("<div id=\"pnetsetlist\">");
-	for(i = 0; i < json.length ; i++) {
+	for(i = 0; i < json.length; i++) {
 		var n = json[i];
 		document.write("<h3>" + n['mmddyy'] + " <a href=\"http://phish.net/setlists/?d=" + n['showdate'] + "\">" + n['venue'] + "</a></h3> <p class='pnetsl'>" + n['setlistdata'] + "</p>");
 		if(n['setlistnotes'].replace(/^\s+|\s+$/g,"")!='') {
@@ -84,10 +86,10 @@ function convertSet(json) {
 
 var retrieve = function() {
 	var showData = request(myURL, function(error, response, body) {
-		showData();
-		console.log(response);
-		//var result = JSON.parse(body);
-		//console.log(result);
+		//showData();
+		console.log(response.body);
+		//console.log(JSON.parse(response));
+		
 	});
 };
 
@@ -105,7 +107,8 @@ module.exports = {
 	mysongs: mysongs,
 	convertSet: convertSet,
 	show: show,
-	retrieve: retrieve
+	retrieve: retrieve,
+	//converter: converter
 };
 
 

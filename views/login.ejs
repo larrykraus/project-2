@@ -1,23 +1,46 @@
 <% include ./partials/header.ejs %>
-
+<!--
 <% if (message) { %>
     <div class="alert alert-danger"><%= message %></div>
-<% } %> 
+<% } %> -->
 
-<h2>Log In</h2>
 
-<form method="post" action="/login">
-	<div class="form-group">
-    	<label for="email">Email</label>
-    	<input class="form-control" type="text" name="email" id="email">
-  	</div>
 
+<div class="uno">
+  <h2>Log In</h2>
+
+  <form method="post" action="/login">
   	<div class="form-group">
-    	<label for="email">Password</label>
-    	<input class="form-control" type="password" name="password" id="password">
-  	</div>
+      	<label for="email">Email</label>
+      	<input class="form-control" type="text" name="email" id="email">
+    	</div>
 
-  	<input class="btn btn-default" type="submit">
-</form>
+    	<div class="form-group">
+      	<label for="email">Password</label>
+      	<input class="form-control" type="password" name="password" id="password">
+    	</div>
+
+    	<input class="btn btn-default" type="submit">
+  </form>
+</div>
+
+<div>
+    <div class="row odd">
+    <div class= "hex" id= "zz"></div>
+    <div class= "hex" id= "y"></div>
+    <div class= "hex" id= "zz"></div>
+    <div class= "hex" id= "x"></div>
+    <div class= "hex" id= "zz"></div>
+    <div class= "hex" id= "d"></div>
+  </div>
+  <div class="row even">
+    <div class= "hex" id= "p"></div>
+    <div class= "hex" id= "r"></div>
+    <div class= "hex" id= "e"></div>
+    <div class= "hex" id= "s"></div>
+    <div class= "hex" id= "t"></div>
+    <div class= "hex" id= "z"></div>
+  </div>
+</div>
 
 <% include ./partials/footer.ejs %>
