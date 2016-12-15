@@ -1,9 +1,11 @@
+/* styles for the body  */
 body {
 	background-color: #b7b7b7;
 	font-family: 'Muli', sans-serif;
 	font-size: 16px;
 }
 
+/* adjusts the buttons  */
 .btn-default {
 	margin-top: 6px;
 	margin-left: 12px;
@@ -13,6 +15,7 @@ body {
 	margin-top: 25px;
 }
 
+/* increases font weight for important content */
 .date {
 	font-weight: 800;
 }
@@ -21,6 +24,7 @@ body {
 	font-weight: 700;
 }
 
+/* styling for hexagons, this is my secret sauce right here */
 .hex {
 	display: inline-block;
 	margin: -16px -8px;
@@ -45,20 +49,19 @@ p#songlist {
 	margin: -5px 15px;
 }
 
+/* styles body content for multiple pages  */
 .uno {
 	width: 600px;
 	margin: 40px 100px;
-
 }
 
 #songlist {
 	margin: 40px 100px;
-
 	width: 300px;
 	height: 800px;
-
 }
 
+/* helps space different rows of hexagons  */
 .odd {
 	margin: -2px -8px -2px 16px;
 }
@@ -67,56 +70,143 @@ p#songlist {
 	margin: 0px 0px 0px 80px;
 }
 
-#a{background-image: url("../images/trey1.jpg");
-	background-position: center top;}
-#b{background-image: url("../images/tab.jpg");
-	background-position: center bottom;}
-#c{background-image: url("../images/lights1.jpg");
-	background-position: center bottom;}
-#d{background-image: url("../images/donuts.jpg");
-	background-position: center center;}
-#e{background-image: url("../images/page1.jpg");
-	background-position: center center;}
-#f{background-image: url("../images/poster3.jpg");}
-#g{background-image: url("../images/nectars.jpg");}
-#h{background-image: url("../images/mike1.jpg");
-	background-size: 140%;
-	background-position: center center;}
-#i{background-image: url("../images/album2.jpg");}
-#j{background-image: url("../images/gorge.jpg");
-	background-position: center center;}
-#k{background-image: url("../images/hotdog.jpg");
-	background-size: 85%;
-	background-position: center center;}
-#l{background-image: url("../images/album3.jpg");}
-#m{background-image: url("../images/ocelot.jpg");
-	background-position: right bottom;}
-#n{background-image: url("../images/mike2.jpeg");
-	background-position: center center;}
-#o{background-image: url("../images/album1.jpg");
-	background-position: right center;}
-#p{background-image: url("../images/balloons.jpg");
-	background-position: center center;}
-#q{background-image: url("../images/crowd2.jpg");}
-#r{background-image: url("../images/fishman1.jpg");
-	background-size: 100%;
-	background-position: center center;}
-#s{background-image: url("../images/lot.jpg");
-	background-position: left center;}
-#t{background-image: url("../images/poster1.jpg");
-	background-position: center center;}
-#u{background-image: url("../images/crowd1.jpg");}
-#v{background-image: url("../images/clifford.jpg");
+/* styling for images in hexagons */
+#a {
+	background-image: url("../images/trey1.jpg");
+	background-position: center top;
+}
+
+#b {
+	background-image: url("../images/tab.jpg");
+	background-position: center bottom;
+}
+
+#c {
+	background-image: url("../images/lights1.jpg");
+	background-position: center bottom;
+}
+
+#d {
+	background-image: url("../images/donuts.jpg");
 	background-position: center center;
-	background-size: 80%;}
-#w{background-image: url("../images/rhombus.jpg");
-	background-position: center center;}
-#x{background-image: url("../images/trey2.jpg");}
-#y{background-image: url("../images/tower.jpg");
-	background-position: left center;}
-#z{background-image: url("../images/redrocks.jpg");
-	background-position: center center;}
-#aa{background-image: url("../images/fishman2.jpg");
-	background-position: right center;}
-#bb{background-image: url("../images/lights2.jpeg");}
-#zz{background: #b7b7b7);}
+}
+
+#e {
+	background-image: url("../images/page1.jpg");
+	background-position: center center;
+}
+
+#f {
+	background-image: url("../images/poster3.jpg");
+}
+
+#g {
+	background-image: url("../images/nectars.jpg");
+}
+
+#h {
+	background-image: url("../images/mike1.jpg");
+	background-size: 140%;
+	background-position: center center;
+}
+
+#i {
+	background-image: url("../images/album2.jpg");
+}
+
+#j {
+	background-image: url("../images/gorge.jpg");
+	background-position: center center;
+}
+
+#k {
+	background-image: url("../images/hotdog.jpg");
+	background-size: 85%;
+	background-position: center center;
+}
+
+#l {
+	background-image: url("../images/album3.jpg");
+}
+
+#m {
+	background-image: url("../images/ocelot.jpg");
+	background-position: right bottom;
+}
+
+#n {
+	background-image: url("../images/mike2.jpeg");
+	background-position: center center;
+}
+
+#o {
+	background-image: url("../images/album1.jpg");
+	background-position: right center;
+}
+
+#p {
+	background-image: url("../images/balloons.jpg");
+	background-position: center center;
+}
+
+#q {
+	background-image: url("../images/crowd2.jpg");
+}
+
+#r {
+	background-image: url("../images/fishman1.jpg");
+	background-size: 100%;
+	background-position: center center;
+}
+
+#s {
+	background-image: url("../images/lot.jpg");
+	background-position: left center;
+}
+
+#t {
+	background-image: url("../images/poster1.jpg");
+	background-position: center center;
+}
+
+#u {
+	background-image: url("../images/crowd1.jpg");
+}
+
+#v {
+	background-image: url("../images/clifford.jpg");
+	background-position: center center;
+	background-size: 80%;
+}
+
+#w {
+	background-image: url("../images/rhombus.jpg");
+	background-position: center center;
+}
+
+#x {
+	background-image: url("../images/trey2.jpg");
+}
+
+#y {
+	background-image: url("../images/tower.jpg");
+	background-position: left center;
+}
+
+#z {
+	background-image: url("../images/redrocks.jpg");
+	background-position: center center;
+}
+
+#aa {
+	background-image: url("../images/fishman2.jpg");
+	background-position: right center;
+}
+
+#bb {
+	background-image: url("../images/lights2.jpeg");
+}
+
+#zz {
+	background: #b7b7b7);
+}

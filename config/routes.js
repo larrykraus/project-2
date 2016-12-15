@@ -1,18 +1,19 @@
+//requirements
 var express = require('express');
 var router = express.Router();
-
 var bodyParser = require('body-parser');
-
 var methodOverride = require('method-override');
 var passport = require('passport');
 var usersController = require('../controllers/users');
 var staticsController = require('../controllers/statics');
 
+//checks to see if user is authenticated
 function authenticatedUser(req, res, next) {
 	if (req.isAuthenticated()) return next();
 	res.redirect('/'); 
 };
 
+//routes for all of my web pages
 router.route('/')
 	.get(staticsController.home);
 

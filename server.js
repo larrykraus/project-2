@@ -1,3 +1,4 @@
+//requirements
 var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
@@ -18,6 +19,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/public'));
 
+//aids passport functionality
 app.use(session({secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS'}));
 app.use(passport.initialize());
 app.use(passport.session());

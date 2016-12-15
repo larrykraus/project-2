@@ -1,3 +1,4 @@
+//requirements
 var passport = require('passport');
 var request = require("request");
 //var myURL = 'http://api.phish.net/api.js?api=2.0&method=pnet.shows.setlists.latest&callback=pnet3setlist';
@@ -71,7 +72,7 @@ function myshows(request, response) {
 	//retrieve();
 };
 
-//prettifies the incoming JSON
+//prettifies the incoming JSON, not to be used
 function convertSet(json) {
 	document.write("<div id=\"pnetsetlist\">");
 	for(i = 0; i < json.length; i++) {
@@ -84,6 +85,7 @@ function convertSet(json) {
 	document.write("</div>");
 };
 
+//grabs content from API
 var retrieve = function() {
 	var showData = request(myURL, function(error, response, body) {
 		//showData();
@@ -93,7 +95,7 @@ var retrieve = function() {
 	});
 };
 
-
+//exporting functions
 module.exports = {
 	getLogin: getLogin,
 	postLogin: postLogin,
@@ -105,7 +107,6 @@ module.exports = {
 	index: index,
 	myshows: myshows,
 	mysongs: mysongs,
-	convertSet: convertSet,
 	show: show,
 	retrieve: retrieve,
 	//converter: converter
