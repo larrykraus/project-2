@@ -1,7 +1,6 @@
 //requirements
 var passport = require('passport');
 var request = require("request");
-//var myURL = 'http://api.phish.net/api.js?api=2.0&method=pnet.shows.setlists.latest&callback=pnet3setlist';
 var myURL = 'http://phish.net/setlists/?year=2014&month=11';
 
 // GET /signup
@@ -62,22 +61,35 @@ function mysongs(request, response) {
 };
 
 
-
-
 // GET /show
 function show(req, response) {
-	function renderShow() {
+	function renderShowPage() {
 		response.render('show.ejs')
 	}
-	//console.log(request.body);
-	var twoShows = request(myURL, function(error, response, body) {
+	var result = req.query;
+	//console.log(result.selectYear);
+	var matchDate = (result.selectYear + "-" + result.selectMonth + "-" + result.selectDay);
+	var flag = "setlist-container";
+	var flag2 = "setlist-notes";
 
-				var result = req.query;
-				console.log(result);
-				//console.log(result.title);
-				renderShow();
-			})
+	var realURL = 'http://phish.net/setlists/?year=' + result.selectYear + '&month=' + result.selectMonth; 
 
+	var twoShows = request(realURL, function(error, response, body) {
+		//plastic surgeons office
+		var body1 = response.body;
+		var marker1 = body1.search(flag);
+		var body2 = body1.slice(marker1, body1.length);
+		var marker2 = body2.search(matchDate);
+		var body3 = body2.slice((marker2 + 16), body2.length);
+		var marker3 = body3.search(flag2);
+		var body4 = body3.slice(0, (marker3 - 12));
+		//console.log(body4);
+
+
+
+
+		renderShowPage(body4);
+		})
 };
 
 // GET /myshows
