@@ -63,8 +63,9 @@ function mysongs(request, response) {
 
 // GET /show
 function show(req, response) {
-	function renderShowPage() {
-		response.render('show.ejs')
+	function renderShowPage(body4) {
+		response.render('show.ejs', {body4: body4});
+
 	}
 	var result = req.query;
 	//console.log(result.selectYear);
@@ -83,7 +84,7 @@ function show(req, response) {
 		var body3 = body2.slice((marker2 + 16), body2.length);
 		var marker3 = body3.search(flag2);
 		var body4 = body3.slice(0, (marker3 - 12));
-		//console.log(body4);
+		console.log(body4);
 
 
 

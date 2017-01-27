@@ -40,6 +40,11 @@ body {
 	font-weight: 700;
 }
 
+#showContainer {
+	width: 70%;
+	margin: 50px auto;
+}
+
 /* styling for hexagons, this is my secret sauce right here */
 .hex {
 	display: inline-block;

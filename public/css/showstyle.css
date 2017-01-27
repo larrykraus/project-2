@@ -1,0 +1,16 @@
+#showContainer a {
+	pointer-events: none;
+	cursor: default;
+	color: black;
+}
+
+.setlist-date, .setlist-venue, .setlist-location {
+	padding: 5px;
+	font-weight: 700;
+
+}
+
+.setlist-location {
+	padding-bottom: 10px;
+	padding-top: 0px;
+}
