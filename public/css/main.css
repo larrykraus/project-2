@@ -5,10 +5,26 @@ body {
 	font-size: 16px;
 }
 
+#yearDiv, #monthDiv, #dayDiv, #fourthDiv {
+	display: inline-block;
+	margin-right: 8px;
+}
+
 /* adjusts the buttons  */
 .btn-default {
 	margin-top: 6px;
 	margin-left: 12px;
+}
+
+#goButton {
+	height: 25px;
+	width: 50px;
+	color: white;
+	background-color: #31b0d5;
+	border-color: #269abc;
+	text-align: top center;
+	position: relative;
+	top:-3px
 }
 
 .about {

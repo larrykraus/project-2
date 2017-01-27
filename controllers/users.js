@@ -2,7 +2,7 @@
 var passport = require('passport');
 var request = require("request");
 //var myURL = 'http://api.phish.net/api.js?api=2.0&method=pnet.shows.setlists.latest&callback=pnet3setlist';
-var myURL = 'http://phish.net/setlists/phish-january-01-2015-american-airlines-arena-miami-fl-usa.html';
+var myURL = 'http://phish.net/setlists/?year=2014&month=11';
 
 // GET /signup
 function getSignup(request, response) {
@@ -61,9 +61,23 @@ function mysongs(request, response) {
 	response.render('mysongs.ejs');
 };
 
+
+
+
 // GET /show
-function show(request, response) {
-	response.render('show.ejs')
+function show(req, response) {
+	function renderShow() {
+		response.render('show.ejs')
+	}
+	//console.log(request.body);
+	var twoShows = request(myURL, function(error, response, body) {
+
+				var result = req.query;
+				console.log(result);
+				//console.log(result.title);
+				renderShow();
+			})
+
 };
 
 // GET /myshows
@@ -109,7 +123,7 @@ module.exports = {
 	mysongs: mysongs,
 	show: show,
 	retrieve: retrieve,
-	//converter: converter
+	//converter: converter,
 };
 
 

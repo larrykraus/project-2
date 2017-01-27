@@ -11,7 +11,9 @@ var session = require('express-session');
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/phish-users');
 
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({
+	extended: true
+}));
 
 app.set('views', './views');
 app.engine('ejs', require('ejs').renderFile);
